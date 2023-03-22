@@ -11,21 +11,21 @@ main(){
     var calc = weight / pow(height, 2);
 
     if(calc < 18.5){
-        print('Underweight');
+        print('$calc Underweight');
     } 
     else if(calc >= 18.5 && calc <= 24.9){
-        print('Normal weight');
+        print('$calc Normal weight');
     } 
     else if(calc >= 25 && calc <= 29.9){
-        print('Overweight');
+        print('$calc Overweight');
     } 
     else if(calc >= 30 && calc <= 34.9){
-        print('Obesity type I');
+        print('$calc Obesity type I');
     } 
     else if(calc >= 35 && calc <= 39.9){
-        print('Obesity type II');
+        print('$calc Obesity type II');
     } 
     else{
-        print('Obesity type III');
+        print('$calc Obesity type III');
     }
 }
