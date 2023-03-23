@@ -12,9 +12,7 @@ main(){
             condition = false;
         }
         else if(text == 'list'){
-            for(var i = 0; i < products.length; i++){
-                print('item $i - ${products[i]}');
-            }
+            listItems(products);
         }
         else if(text == 'remove'){
             print('which item would you like to remove?');
@@ -27,5 +25,11 @@ main(){
         else{
         products.add(text);
         }
+    }
+}
+
+listItems(products){
+    for(var i = 0; i < products.length; i++){
+        print('item $i - ${products[i]}');
     }
 }
