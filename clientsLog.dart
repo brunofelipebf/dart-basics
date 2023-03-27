@@ -1,12 +1,28 @@
 import 'dart:io';
 
-void main(){
+Map<String, dynamic> clientsLog = {};
+void main() {
+  bool condition = true;
 
-  var maps = {
-    "nome" : "Bruno",
-    "idade" : 27,
-    "cidade" : "Escada",
-  };
+  while (condition) {
+    print('start typing');
+    var command = stdin.readLineSync();
+    if (command == "quit") {
+      print('finished program');
+    } else if (command == 'signup') {
+      signup();
+    } else if (command == 'print') {
+      print(clientsLog);
+    }
+  }
+}
 
-  print(maps["nome"]);
+signup() {
+  print('type your name');
+  var name = stdin.readLineSync();
+  clientsLog['name'] = name;
+
+  print('type your age');
+  var age = stdin.readLineSync();
+  clientsLog['age'] = age;
 }
